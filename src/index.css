@@ -3,3 +3,10 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+
+/* Offset scroll targets on mobile to account for the fixed top nav bar */
+@media (max-width: 767px) {
+  #experience, #timeline, #tools, #repos, #contact {
+    scroll-margin-top: 80px;
+  }
+}

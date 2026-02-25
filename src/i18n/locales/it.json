@@ -15,7 +15,7 @@
   },
   "about": {
     "technical_label": "Profilo Tecnico",
-    "technical_text": "Sono uno sviluppatore Full-Stack con oltre sette anni di esperienza nello sviluppo di applicazioni web moderne, maturata in contesti enterprise e cloud-native. Nel mio percorso ho consolidato competenze approfondite in <react>React</react>, <angular>Angular</angular> e <nodejs>Node.js</nodejs>, lavorando su architetture a microservizi e ambienti containerizzati su Google Cloud Platform e AWS. Mi contraddistingue un approccio orientato alla qualità del codice, all'adozione di best practice e al miglioramento continuo, unito a una naturale predisposizione alla collaborazione e alla condivisione di competenze all'interno di team Agile.",
+    "technical_text": "Sono uno sviluppatore Full-Stack con oltre otto anni di esperienza nello sviluppo di applicazioni web moderne, maturata in contesti enterprise e cloud-native. Nel mio percorso ho consolidato competenze approfondite in <react>React</react>, <angular>Angular</angular> e <nodejs>Node.js</nodejs>, lavorando su architetture a microservizi e ambienti containerizzati su Google Cloud Platform e AWS. Mi contraddistingue un approccio orientato alla qualità del codice, all'adozione di best practice e al miglioramento continuo, unito a una naturale predisposizione alla collaborazione e alla condivisione di competenze all'interno di team Agile.",
     "hobbies_label": "Passioni & Interessi",
     "hobbies_text": "Accanto alla dimensione tecnica coltivo passioni da vero nerd. Sono un appassionato di Magic: The Gathering, di cui amo in primis l'aspetto puramente artistico da cui nasce e sono un assiduo frequentatore della scena torneistica Premodern italiana (e non). Parte del mio tempo libero, però, viene dedicato anche a Warhammer: Age of Sigmar, di cui sono un avido collezionista e giocatore. Completa il mio profilo l'interesse per i giochi da tavolo, la cui passione ha portato me e la mia compagna a collezionarne e giocarne la bellezza di più di 150 (e si, li abbiamo davvero giocati tutti :D)."
   },
@@ -23,6 +23,7 @@
     "experience": "Esperienza Lavorativa",
     "timeline": "Anni di Esperienza",
     "tools": "Strumenti Più Usati",
+    "repos": "Progetti Personali",
     "contact": "Lavoriamo Insieme"
   },
   "timeline": {
@@ -42,6 +43,12 @@
   "tools": {
     "title_line1": "STRUMENTI",
     "title_line2": "PIU' USATI"
+  },
+  "repos": {
+    "title_line1": "PROGETTI",
+    "title_line2": "PERSONALI",
+    "mssqlimporter_desc": "Uno strumento CLI per importare dati da file CSV o Excel direttamente in un database Microsoft SQL Server, con variabili d'ambiente configurabili per la connessione e la definizione della tabella di destinazione.",
+    "merger_desc": "Una utility per unire più file CSV di esportazione ordini di BrickLink in un unico file consolidato, semplificando la gestione dell'inventario e degli ordini per gli appassionati di LEGO."
   },
   "contact": {
     "title_line1": "LAVORIAMO",

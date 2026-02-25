@@ -12,17 +12,18 @@
 .gradient-background {
   background: linear-gradient(45deg,#11151c,#212d40,#364156,#7d4e57,#d66853);
   background-size: 300% 300%;
+  -webkit-animation: gradient-animation 30s ease infinite;
   animation: gradient-animation 30s ease infinite;
 }
 
+@-webkit-keyframes gradient-animation {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 @keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }

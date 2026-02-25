@@ -4,7 +4,7 @@ import { Tooltip } from '@/components/ui/tooltip'
 import AvatarImg from "@/assets/profile.jpg"
 import { useEffect, useRef, useState } from 'react'
 import { useTranslation, Trans } from 'react-i18next'
-import { FiBriefcase, FiCalendar, FiTool, FiMail, FiPackage } from 'react-icons/fi'
+import { FiBriefcase, FiCalendar, FiTool, FiMail, FiPackage, FiGithub, FiExternalLink } from 'react-icons/fi'
 import { FaLinkedin } from 'react-icons/fa'
 import { SiStripe, SiFirebase, SiGooglecloud, SiAmazonwebservices, SiVite, SiNestjs } from 'react-icons/si'
 
@@ -17,6 +17,7 @@ const SECTION_IDS = {
   EXPERIENCE: 'experience',
   TIMELINE: 'timeline',
   TOOLS: 'tools',
+  REPOS: 'repos',
   CONTACT: 'contact',
 } as const
 type SectionId = typeof SECTION_IDS[keyof typeof SECTION_IDS]
@@ -25,7 +26,23 @@ const NAV_ITEMS: { id: SectionId; icon: React.ElementType; labelKey: string }[] 
   { id: SECTION_IDS.EXPERIENCE, icon: FiBriefcase, labelKey: 'nav.experience' },
   { id: SECTION_IDS.TIMELINE, icon: FiCalendar, labelKey: 'nav.timeline' },
   { id: SECTION_IDS.TOOLS, icon: FiTool, labelKey: 'nav.tools' },
+  { id: SECTION_IDS.REPOS, icon: FiGithub, labelKey: 'nav.repos' },
   { id: SECTION_IDS.CONTACT, icon: FiMail, labelKey: 'nav.contact' },
+]
+
+const REPOS_LIST = [
+  {
+    name: 'mssqlImporter',
+    url: 'https://github.com/Hiru93/mssqlImporter',
+    descKey: 'repos.mssqlimporter_desc',
+    tech: ['Node.js', 'MSSQL', 'CLI'],
+  },
+  {
+    name: 'merger-lg-csv',
+    url: 'https://github.com/Hiru93/merger-lg-csv',
+    descKey: 'repos.merger_desc',
+    tech: ['Node.js', 'CSV'],
+  },
 ]
 
 const TOOLS_LIST = [
@@ -50,16 +67,12 @@ function App () {
   const { t, i18n } = useTranslation()
   const [activeSection, setActiveSection] = useState<SectionId>(SECTION_IDS.EXPERIENCE)
   const [sectionVisibility, setSectionVisibility] = useState<Record<SectionId, boolean>>({
-    experience: false, timeline: false, tools: false, contact: false,
+    experience: false, timeline: false, tools: false, repos: false, contact: false,
   })
   // Track whether we are on a mobile viewport (< 768px = Chakra "md" breakpoint)
   const [isMobile, setIsMobile] = useState(() => window.innerWidth < 768)
   const scrollRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    document.body.classList.add(styles['gradient-background'])
-    return () => { document.body.classList.remove(styles['gradient-background']) }
-  }, [])
 
   useEffect(() => {
     const mq = window.matchMedia('(max-width: 767px)')
@@ -73,21 +86,39 @@ function App () {
   useEffect(() => {
     const root = isMobile ? null : scrollRef.current
     if (!isMobile && !scrollRef.current) return
-    const observer = new IntersectionObserver(
+
+    // Fade-in animation: section visible when 15%+ is in view
+    const visibilityObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach(entry => {
-          const id = entry.target.id as SectionId
-          if (entry.isIntersecting) setActiveSection(id)
-          setSectionVisibility(prev => ({ ...prev, [id]: entry.isIntersecting }))
+          setSectionVisibility(prev => ({ ...prev, [entry.target.id as SectionId]: entry.isIntersecting }))
         })
       },
       { root, threshold: 0.15 }
     )
+
+    // Nav highlight: only the section inside the central ~10% band of the viewport is active,
+    // so two sections can never be highlighted simultaneously.
+    const activeObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) setActiveSection(entry.target.id as SectionId)
+        })
+      },
+      { root, rootMargin: '-40% 0px -50% 0px', threshold: 0 }
+    )
+
     Object.values(SECTION_IDS).forEach(id => {
       const el = document.getElementById(id)
-      if (el) observer.observe(el)
+      if (el) {
+        visibilityObserver.observe(el)
+        activeObserver.observe(el)
+      }
     })
-    return () => observer.disconnect()
+    return () => {
+      visibilityObserver.disconnect()
+      activeObserver.disconnect()
+    }
   }, [isMobile])
 
   const sectionStyle = (id: SectionId) => ({
@@ -121,6 +152,7 @@ function App () {
     <Box minH="100vh" w="full" display="flex" justifyContent="center"
       onWheel={(e) => { if (scrollRef.current && !scrollRef.current.contains(e.target as Node)) scrollRef.current.scrollTop += e.deltaY }}
     >
+      <Box position="fixed" top="0" left="0" w="100vw" h="100vh" zIndex={-1} className={styles['gradient-background']} />
 
       {/* ── Mobile: fixed top nav (hidden on md+) ── */}
       <Box
@@ -240,7 +272,7 @@ function App () {
         >
 
           {/* ─── Section 1: Working Experience ─── */}
-          <Box id={SECTION_IDS.EXPERIENCE} px={{ base: '5', md: '16' }} pt={{ base: '10', md: '16' }} pb={{ base: '16', md: '24' }}>
+          <Box id={SECTION_IDS.EXPERIENCE} px={{ base: '5', md: '16' }} pt={{ base: '16', md: '24' }} pb={{ base: '28', md: '48' }}>
             <VStack align="start" gap="10" style={sectionStyle(SECTION_IDS.EXPERIENCE)}>
               <VStack align="start" gap="0">
                 <Heading fontSize={{ base: '5xl', md: '8xl' }} fontWeight="extrabold" color="white" lineHeight="1" letterSpacing="tight">
@@ -284,7 +316,7 @@ function App () {
           </Box>
 
           {/* ─── Section 2: 8+ Years of Experience ─── */}
-          <Box id={SECTION_IDS.TIMELINE} px={{ base: '5', md: '16' }} pt={{ base: '10', md: '16' }} pb={{ base: '16', md: '24' }}>
+          <Box id={SECTION_IDS.TIMELINE} px={{ base: '5', md: '16' }} pt={{ base: '16', md: '24' }} pb={{ base: '28', md: '48' }}>
             <VStack align="start" gap="10" style={sectionStyle(SECTION_IDS.TIMELINE)}>
               <VStack align="start" gap="0">
                 <Heading fontSize={{ base: '5xl', md: '8xl' }} fontWeight="extrabold" color="white" lineHeight="1" letterSpacing="tight">
@@ -322,7 +354,7 @@ function App () {
           </Box>
 
           {/* ─── Section 3: Most Used Tools ─── */}
-          <Box id={SECTION_IDS.TOOLS} px={{ base: '5', md: '16' }} pt={{ base: '10', md: '16' }} pb={{ base: '16', md: '24' }}>
+          <Box id={SECTION_IDS.TOOLS} px={{ base: '5', md: '16' }} pt={{ base: '16', md: '24' }} pb={{ base: '28', md: '48' }}>
             <VStack align="start" gap="10" style={sectionStyle(SECTION_IDS.TOOLS)}>
               <VStack align="start" gap="0">
                 <Heading fontSize={{ base: '5xl', md: '8xl' }} fontWeight="extrabold" color="white" lineHeight="1" letterSpacing="tight">
@@ -358,8 +390,58 @@ function App () {
             </VStack>
           </Box>
 
-          {/* ─── Section 4: Let's Work Together ─── */}
-          <Box id={SECTION_IDS.CONTACT} px={{ base: '5', md: '16' }} pt={{ base: '10', md: '16' }} pb={{ base: '16', md: '24' }}>
+          {/* ─── Section 4: Personal Repos ─── */}
+          <Box id={SECTION_IDS.REPOS} px={{ base: '5', md: '16' }} pt={{ base: '16', md: '24' }} pb={{ base: '28', md: '48' }}>
+            <VStack align="start" gap="10" style={sectionStyle(SECTION_IDS.REPOS)}>
+              <VStack align="start" gap="0">
+                <Heading fontSize={{ base: '5xl', md: '8xl' }} fontWeight="extrabold" color="white" lineHeight="1" letterSpacing="tight">
+                  {t('repos.title_line1')}
+                </Heading>
+                <Heading fontSize={{ base: '5xl', md: '8xl' }} fontWeight="extrabold" color="whiteAlpha.300" lineHeight="1" letterSpacing="tight">
+                  {t('repos.title_line2')}
+                </Heading>
+              </VStack>
+
+              <Box w="full" h="1px" bg="whiteAlpha.100" />
+
+              <VStack gap="4" align="start" w="full" maxW="640px">
+                {REPOS_LIST.map(repo => (
+                  <Link key={repo.name} href={repo.url} target="_blank" _hover={{ textDecoration: 'none' }} display="flex" w="full">
+                    <HStack
+                      gap="4" px="5" py="4" w="full"
+                      bg="rgba(33, 45, 64, 0.5)"
+                      borderRadius="xl"
+                      border="1px solid" borderColor="#364156"
+                      _hover={{ borderColor: ACCENT, bg: 'rgba(33, 45, 64, 0.85)' }}
+                      transition="all 0.2s"
+                      align="start"
+                    >
+                      <Box pt="1" flexShrink={0}>
+                        <FiGithub size={24} color={ACCENT} />
+                      </Box>
+                      <VStack align="start" gap="2" flex="1">
+                        <HStack gap="2" justify="space-between" w="full">
+                          <Text fontWeight="semibold" color="white" fontSize="md">{repo.name}</Text>
+                          <FiExternalLink size={14} color={ACCENT} />
+                        </HStack>
+                        <Text fontSize="sm" color={TEXT_PRIMARY} lineHeight="tall">{t(repo.descKey)}</Text>
+                        <HStack gap="2" flexWrap="wrap">
+                          {repo.tech.map(tag => (
+                            <Text key={tag} fontSize="xs" color={ACCENT} bg="rgba(214,104,83,0.12)" px="2" py="0.5" borderRadius="md" fontWeight="medium">
+                              {tag}
+                            </Text>
+                          ))}
+                        </HStack>
+                      </VStack>
+                    </HStack>
+                  </Link>
+                ))}
+              </VStack>
+            </VStack>
+          </Box>
+
+          {/* ─── Section 5: Let's Work Together ─── */}
+          <Box id={SECTION_IDS.CONTACT} px={{ base: '5', md: '16' }} pt={{ base: '16', md: '24' }} pb={{ base: '28', md: '48' }}>
             <VStack align="start" gap="10" style={sectionStyle(SECTION_IDS.CONTACT)}>
               <VStack align="start" gap="0">
                 <Heading fontSize={{ base: '5xl', md: '8xl' }} fontWeight="extrabold" color="white" lineHeight="1" letterSpacing="tight">
