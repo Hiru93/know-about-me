@@ -8,42 +8,42 @@ import { FiBriefcase, FiCalendar, FiTool, FiMail, FiPackage } from 'react-icons/
 import { FaLinkedin } from 'react-icons/fa'
 import { SiStripe, SiFirebase, SiGooglecloud, SiAmazonwebservices, SiVite, SiNestjs } from 'react-icons/si'
 
-const ACCENT         = "#d66853"
-const CARD_BG        = "#11151c"
-const TEXT_PRIMARY   = "#c9d4e3"
+const ACCENT = "#d66853"
+const CARD_BG = "#11151c"
+const TEXT_PRIMARY = "#c9d4e3"
 const TEXT_SECONDARY = "#7e8fa8"
 
 const SECTION_IDS = {
   EXPERIENCE: 'experience',
-  TIMELINE:   'timeline',
-  TOOLS:      'tools',
-  CONTACT:    'contact',
+  TIMELINE: 'timeline',
+  TOOLS: 'tools',
+  CONTACT: 'contact',
 } as const
 type SectionId = typeof SECTION_IDS[keyof typeof SECTION_IDS]
 
 const NAV_ITEMS: { id: SectionId; icon: React.ElementType; labelKey: string }[] = [
   { id: SECTION_IDS.EXPERIENCE, icon: FiBriefcase, labelKey: 'nav.experience' },
-  { id: SECTION_IDS.TIMELINE,   icon: FiCalendar,  labelKey: 'nav.timeline'   },
-  { id: SECTION_IDS.TOOLS,      icon: FiTool,      labelKey: 'nav.tools'      },
-  { id: SECTION_IDS.CONTACT,    icon: FiMail,      labelKey: 'nav.contact'    },
+  { id: SECTION_IDS.TIMELINE, icon: FiCalendar, labelKey: 'nav.timeline' },
+  { id: SECTION_IDS.TOOLS, icon: FiTool, labelKey: 'nav.tools' },
+  { id: SECTION_IDS.CONTACT, icon: FiMail, labelKey: 'nav.contact' },
 ]
 
 const TOOLS_LIST = [
-  { name: 'Stripe',       icon: SiStripe,           url: 'https://stripe.com',             category: 'Payments'           },
-  { name: 'RevenueCat',   icon: FiPackage,           url: 'https://www.revenuecat.com',      category: 'Subscriptions'      },
-  { name: 'Firebase',     icon: SiFirebase,          url: 'https://firebase.google.com',     category: 'Backend / Database' },
-  { name: 'Google Cloud', icon: SiGooglecloud,       url: 'https://cloud.google.com',        category: 'Cloud Platform'     },
-  { name: 'AWS',          icon: SiAmazonwebservices, url: 'https://aws.amazon.com',          category: 'Cloud Platform'     },
-  { name: 'Vite',         icon: SiVite,              url: 'https://vitejs.dev',              category: 'Build Tool'         },
-  { name: 'NestJS',       icon: SiNestjs,            url: 'https://nestjs.com',              category: 'Backend Framework'  },
+  { name: 'Stripe', icon: SiStripe, url: 'https://stripe.com', category: 'Payments' },
+  { name: 'RevenueCat', icon: FiPackage, url: 'https://www.revenuecat.com', category: 'Subscriptions' },
+  { name: 'Firebase', icon: SiFirebase, url: 'https://firebase.google.com', category: 'Backend / Database' },
+  { name: 'Google Cloud', icon: SiGooglecloud, url: 'https://cloud.google.com', category: 'Cloud Platform' },
+  { name: 'AWS', icon: SiAmazonwebservices, url: 'https://aws.amazon.com', category: 'Cloud Platform' },
+  { name: 'Vite', icon: SiVite, url: 'https://vitejs.dev', category: 'Build Tool' },
+  { name: 'NestJS', icon: SiNestjs, url: 'https://nestjs.com', category: 'Backend Framework' },
 ]
 
 const COMPANIES: { id: string; name: string; period: string }[] = [
-  { id: 'exabyte', name: 'Exabyte',   period: 'Oct 2023 \u2013 Present'  },
-  { id: 'm31',     name: 'M31',       period: 'Jan 2023 \u2013 Sep 2023' },
-  { id: 'scai',    name: 'SCAI ITEC', period: 'Dec 2020 \u2013 Dec 2022' },
-  { id: 'remedia', name: 'reMedia',   period: 'Jun 2018 \u2013 Dec 2020' },
-  { id: 'trizeta', name: 'Trizeta',   period: '2017 \u2013 2018'         },
+  { id: 'exabyte', name: 'Exabyte', period: 'Oct 2023 \u2013 Present' },
+  { id: 'm31', name: 'M31', period: 'Jan 2023 \u2013 Sep 2023' },
+  { id: 'scai', name: 'SCAI ITEC', period: 'Dec 2020 \u2013 Dec 2022' },
+  { id: 'remedia', name: 'reMedia', period: 'Jun 2018 \u2013 Dec 2020' },
+  { id: 'trizeta', name: 'Trizeta', period: '2017 \u2013 2018' },
 ]
 
 function App () {
@@ -272,18 +272,12 @@ function App () {
                 <VStack gap="2" align="start">
                   <Text fontSize="xs" color={ACCENT} textTransform="uppercase" letterSpacing="widest" fontWeight="semibold">{t('about.technical_label')}</Text>
                   <Text color={TEXT_PRIMARY} fontSize={{ base: 'sm', md: 'lg' }} lineHeight="1.8">
-                    <Trans i18nKey="about.technical_text" components={{ react: <Link href="#" color={ACCENT}/>, angular: <Link href="#" color={ACCENT}/>, nodejs: <Link href="#" color={ACCENT}/> }} />
+                    <Trans i18nKey="about.technical_text" components={{ react: <Link href="#" color={ACCENT} />, angular: <Link href="#" color={ACCENT} />, nodejs: <Link href="#" color={ACCENT} /> }} />
                   </Text>
                 </VStack>
                 <VStack gap="2" align="start">
                   <Text fontSize="xs" color={ACCENT} textTransform="uppercase" letterSpacing="widest" fontWeight="semibold">{t('about.hobbies_label')}</Text>
                   <Text color={TEXT_PRIMARY} fontSize={{ base: 'sm', md: 'lg' }} lineHeight="1.8">{t('about.hobbies_text')}</Text>
-                </VStack>
-                <VStack gap="2" align="start">
-                  <Text fontSize="xs" color={ACCENT} textTransform="uppercase" letterSpacing="widest" fontWeight="semibold">{t('about.interests_label')}</Text>
-                  <Text color={TEXT_PRIMARY} fontSize={{ base: 'sm', md: 'lg' }} lineHeight="1.8">
-                    <Trans i18nKey="about.interests_text" components={{ tool: <Link href="https://www.toolband.com" color={ACCENT}/> }} />
-                  </Text>
                 </VStack>
               </VStack>
             </VStack>
