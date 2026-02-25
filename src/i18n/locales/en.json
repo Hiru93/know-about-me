@@ -1,0 +1,53 @@
+{
+  "card": {
+    "description": "A full-stack developer with an immoderate passion for Docker and for flinging rectangular cardboard pieces on tournament tables at Magic events."
+  },
+  "hero": {
+    "title_line1": "FULL-STACK",
+    "title_line2": "DEVELOPER",
+    "description": "I have focused my entire career on developing web products and their subsequent delivery using the most widespread JS frameworks, with particular attention to the main cloud platforms and CI/CD tools."
+  },
+  "stats": {
+    "years_value": "8+",
+    "years_label": "Years of experience",
+    "companies_value": "5",
+    "companies_label": "Companies worked with"
+  },
+  "about": {
+    "technical_label": "Technical Profile",
+    "technical_text": "I am a Full-Stack developer with over seven years of experience in modern web application development, gained in enterprise and cloud-native environments. Throughout my career I have built deep expertise in <react>React</react>, <angular>Angular</angular> and <nodejs>Node.js</nodejs>, working on microservices architectures and containerised environments on Google Cloud Platform and AWS. I am driven by a strong focus on code quality, best practices and continuous improvement, combined with a natural inclination towards collaboration and knowledge sharing within Agile teams.",
+    "hobbies_label": "Passions & Interests",
+    "hobbies_text": "Alongside the technical side I cultivate passions of a true nerd. I am a fan of Magic: The Gathering, of which I love first and foremost the purely artistic aspect from which it originates, and I am a regular of the Italian (and not only) Premodern tournament scene. Part of my free time, however, is also dedicated to Warhammer: Age of Sigmar, of which I am an avid collector and player. Rounding out my profile is a passion for board games, which has led me and my partner to collect and play as many as over 150 of them (and yes, we have really played them all :D)."
+  },
+  "nav": {
+    "experience": "Working Experience",
+    "timeline": "Years of Experience",
+    "tools": "Most Used Tools",
+    "contact": "Let's Work Together"
+  },
+  "timeline": {
+    "title_line1": "8+ YEARS OF",
+    "title_line2": "EXPERIENCE",
+    "exabyte_role": "Full-Stack Developer",
+    "exabyte_desc": "Working on enterprise applications built with Angular, React and Node.js, ensuring performance and scalability. Managing cloud infrastructure on Google Cloud Platform and AWS, implementing cloud functions and handling containers with Docker. Also involved in mentoring junior developers and actively participating in Agile delivery cycles.",
+    "m31_role": "Front-End / Full-Stack Developer",
+    "m31_desc": "Contributed to a microservices-based project fully managed on Google Cloud Platform, working with Kubernetes, Docker and Cloud Functions. Deepened expertise in React, Angular, Node.js, PostgreSQL and MySQL, moving closer to a full-stack profile with a DevOps perspective.",
+    "scai_role": "Front-End Developer",
+    "scai_desc": "Developed dynamic React interfaces integrated with Java backends for banking applications. Collaborated with multidisciplinary teams and adopted a methodical approach to the software development lifecycle.",
+    "remedia_role": "Front-End Developer",
+    "remedia_desc": "Started as a React developer building interactive and responsive interfaces for custom applications. Gradually expanded responsibilities to include small full-stack projects, handling both front-end and back-end.",
+    "trizeta_role": "Front-End Developer",
+    "trizeta_desc": "First steps in web development, working with AngularJS, jQuery, JavaScript, HTML5 and CSS3. Built the technical and methodological foundations of my career."
+  },
+  "tools": {
+    "title_line1": "MOST USED",
+    "title_line2": "TOOLS"
+  },
+  "contact": {
+    "title_line1": "LET'S WORK",
+    "title_line2": "TOGETHER",
+    "text": "If you think I could be a nice fit for your workplace, or if you just want to contact me to play some good old Magic — hit me up! I am always keen on new working opportunities (and Magic buddies too, of course!).",
+    "linkedin": "Connect on LinkedIn",
+    "email": "mattia.gallinaro93@gmail.com"
+  }
+}

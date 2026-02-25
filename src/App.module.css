@@ -1,0 +1,28 @@
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.9s ease-in-out;
+}
+
+/* Gradient animation created using https://animated-gradient-background-generator.netlify.app/ */
+/* Colors used: #11151c, #212d40, #364156, #7d4e57, #d66853 */
+.gradient-background {
+  background: linear-gradient(45deg,#11151c,#212d40,#364156,#7d4e57,#d66853);
+  background-size: 300% 300%;
+  animation: gradient-animation 30s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
