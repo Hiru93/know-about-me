@@ -32,6 +32,12 @@ const NAV_ITEMS: { id: SectionId; icon: React.ElementType; labelKey: string }[] 
 
 const REPOS_LIST = [
   {
+    name: 'know-about-me',
+    url: 'https://github.com/Hiru93/know-about-me',
+    descKey: 'repos.knowaboutme_desc',
+    tech: ['React', 'TypeScript', 'Vite'],
+  },
+  {
     name: 'mssqlImporter',
     url: 'https://github.com/Hiru93/mssqlImporter',
     descKey: 'repos.mssqlimporter_desc',

@@ -48,7 +48,8 @@
     "title_line1": "PROGETTI",
     "title_line2": "PERSONALI",
     "mssqlimporter_desc": "Uno strumento CLI per importare dati da file CSV o Excel direttamente in un database Microsoft SQL Server, con variabili d'ambiente configurabili per la connessione e la definizione della tabella di destinazione.",
-    "merger_desc": "Una utility per unire più file CSV di esportazione ordini di BrickLink in un unico file consolidato, semplificando la gestione dell'inventario e degli ordini per gli appassionati di LEGO."
+    "merger_desc": "Una utility per unire più file CSV di esportazione ordini di BrickLink in un unico file consolidato, semplificando la gestione dell'inventario e degli ordini per gli appassionati di LEGO.",
+    "knowaboutme_desc": "Proprio questa pagina! Un portfolio personale e CV realizzato con React, Vite + TypeScript, con interfaccia multilingua ed una semplicissima animazione applicata allo sfondo."
   },
   "contact": {
     "title_line1": "LAVORIAMO",
