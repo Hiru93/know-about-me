@@ -8,14 +8,14 @@
     "description": "I have focused my entire career on developing web products and their subsequent delivery using the most widespread JS frameworks, with particular attention to the main cloud platforms and CI/CD tools."
   },
   "stats": {
-    "years_value": "8+",
+    "years_value": "9+",
     "years_label": "Years of experience",
     "companies_value": "5",
     "companies_label": "Companies worked with"
   },
   "about": {
     "technical_label": "Technical Profile",
-    "technical_text": "I am a Full-Stack developer with over eight years of experience in modern web application development, gained in enterprise and cloud-native environments. Throughout my career I have built deep expertise in <react>React</react>, <angular>Angular</angular> and <nodejs>Node.js</nodejs>, working on microservices architectures and containerised environments on Google Cloud Platform and AWS. I am driven by a strong focus on code quality, best practices and continuous improvement, combined with a natural inclination towards collaboration and knowledge sharing within Agile teams.",
+    "technical_text": "I am a Full-Stack developer with over nine years of experience in modern web application development, gained in enterprise and cloud-native environments. Throughout my career I have built deep expertise in <react>React</react>, <angular>Angular</angular> and <nodejs>Node.js</nodejs>, working on microservices architectures and containerised environments on Google Cloud Platform and AWS. I am driven by a strong focus on code quality, best practices and continuous improvement, combined with a natural inclination towards collaboration and knowledge sharing within Agile teams.",
     "hobbies_label": "Passions & Interests",
     "hobbies_text": "Alongside the technical side I cultivate passions of a true nerd. I am a fan of Magic: The Gathering, of which I love first and foremost the purely artistic aspect from which it originates, and I am a regular of the Italian (and not only) Premodern tournament scene. Part of my free time, however, is also dedicated to Warhammer: Age of Sigmar, of which I am an avid collector and player. Rounding out my profile is a passion for board games, which has led me and my partner to collect and play as many as over 150 of them (and yes, we have really played them all :D)."
   },
@@ -27,22 +27,33 @@
     "contact": "Let's Work Together"
   },
   "timeline": {
-    "title_line1": "8+ YEARS OF",
+    "title_line1": "9+ YEARS OF",
     "title_line2": "EXPERIENCE",
+    "exabyte_period": "Oct 2023 – Present",
     "exabyte_role": "Full-Stack Developer",
     "exabyte_desc": "Working on enterprise applications built with Angular, React and Node.js, ensuring performance and scalability. Managing cloud infrastructure on Google Cloud Platform and AWS, implementing cloud functions and handling containers with Docker. Also involved in mentoring junior developers and actively participating in Agile delivery cycles.",
+    "m31_period": "Jan 2023 – Oct 2023",
     "m31_role": "Front-End / Full-Stack Developer",
     "m31_desc": "Contributed to a microservices-based project fully managed on Google Cloud Platform, working with Kubernetes, Docker and Cloud Functions. Deepened expertise in React, Angular, Node.js, PostgreSQL and MySQL, moving closer to a full-stack profile with a DevOps perspective.",
+    "scai_period": "Dec 2020 – Jan 2023",
     "scai_role": "Front-End Developer",
     "scai_desc": "Developed dynamic React interfaces integrated with Java backends for banking applications. Collaborated with multidisciplinary teams and adopted a methodical approach to the software development lifecycle.",
+    "remedia_period": "Jun 2018 – Dec 2020",
     "remedia_role": "Front-End Developer",
     "remedia_desc": "Started as a React developer building interactive and responsive interfaces for custom applications. Gradually expanded responsibilities to include small full-stack projects, handling both front-end and back-end.",
+    "trizeta_period": "May 2017 – Jun 2018",
     "trizeta_role": "Front-End Developer",
     "trizeta_desc": "First steps in web development, working with AngularJS, jQuery, JavaScript, HTML5 and CSS3. Built the technical and methodological foundations of my career."
   },
   "tools": {
     "title_line1": "MOST USED",
-    "title_line2": "TOOLS"
+    "title_line2": "TOOLS",
+    "cat_payments": "Payments",
+    "cat_subscriptions": "Subscriptions",
+    "cat_backend_db": "Backend / Database",
+    "cat_cloud": "Cloud Platform",
+    "cat_build": "Build Tool",
+    "cat_backend_fw": "Backend Framework"
   },
   "repos": {
     "title_line1": "PERSONAL",

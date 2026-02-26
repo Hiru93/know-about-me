@@ -8,14 +8,14 @@
     "description": "Ho incentrato la mia intera carriera sullo sviluppo di prodotti web ed il loro conseguente rilascio utilizzando i framework JS più diffusi, con un'attenzione particolare alle principali piattaforme cloud ed agli strumenti di CI/CD."
   },
   "stats": {
-    "years_value": "8+",
+    "years_value": "9+",
     "years_label": "Anni di esperienza",
     "companies_value": "5",
     "companies_label": "Le aziende con cui ho collaborato"
   },
   "about": {
     "technical_label": "Profilo Tecnico",
-    "technical_text": "Sono uno sviluppatore Full-Stack con oltre otto anni di esperienza nello sviluppo di applicazioni web moderne, maturata in contesti enterprise e cloud-native. Nel mio percorso ho consolidato competenze approfondite in <react>React</react>, <angular>Angular</angular> e <nodejs>Node.js</nodejs>, lavorando su architetture a microservizi e ambienti containerizzati su Google Cloud Platform e AWS. Mi contraddistingue un approccio orientato alla qualità del codice, all'adozione di best practice e al miglioramento continuo, unito a una naturale predisposizione alla collaborazione e alla condivisione di competenze all'interno di team Agile.",
+    "technical_text": "Sono uno sviluppatore Full-Stack con oltre nove anni di esperienza nello sviluppo di applicazioni web moderne, maturata in contesti enterprise e cloud-native. Nel mio percorso ho consolidato competenze approfondite in <react>React</react>, <angular>Angular</angular> e <nodejs>Node.js</nodejs>, lavorando su architetture a microservizi e ambienti containerizzati su Google Cloud Platform e AWS. Mi contraddistingue un approccio orientato alla qualità del codice, all'adozione di best practice e al miglioramento continuo, unito a una naturale predisposizione alla collaborazione e alla condivisione di competenze all'interno di team Agile.",
     "hobbies_label": "Passioni & Interessi",
     "hobbies_text": "Accanto alla dimensione tecnica coltivo passioni da vero nerd. Sono un appassionato di Magic: The Gathering, di cui amo in primis l'aspetto puramente artistico da cui nasce e sono un assiduo frequentatore della scena torneistica Premodern italiana (e non). Parte del mio tempo libero, però, viene dedicato anche a Warhammer: Age of Sigmar, di cui sono un avido collezionista e giocatore. Completa il mio profilo l'interesse per i giochi da tavolo, la cui passione ha portato me e la mia compagna a collezionarne e giocarne la bellezza di più di 150 (e si, li abbiamo davvero giocati tutti :D)."
   },
@@ -27,22 +27,33 @@
     "contact": "Lavoriamo Insieme"
   },
   "timeline": {
-    "title_line1": "8+ ANNI DI",
+    "title_line1": "9+ ANNI DI",
     "title_line2": "ESPERIENZA",
+    "exabyte_period": "Ott 2023 – Presente",
     "exabyte_role": "Full-Stack Developer",
     "exabyte_desc": "Sviluppo e manutenzione di applicazioni enterprise con Angular, React e Node.js, garantendo performance e scalabilita'. Gestione di infrastrutture cloud su Google Cloud Platform e AWS, implementazione di cloud functions e gestione di container tramite Docker. Supporto e formazione di risorse junior e collaborazione ai processi Agile.",
+    "m31_period": "Gen 2023 – Ott 2023",
     "m31_role": "Front-End / Full-Stack Developer",
     "m31_desc": "Partecipazione allo sviluppo di un progetto a microservizi gestito interamente su Google Cloud Platform, con Kubernetes, Docker e Cloud Functions. Consolidamento delle competenze su React, Angular, Node.js, PostgreSQL e MySQL, con una prospettiva DevOps.",
+    "scai_period": "Dic 2020 – Gen 2023",
     "scai_role": "Front-End Developer",
     "scai_desc": "Sviluppo di interfacce React dinamiche integrate con back-end Java per applicazioni in ambito bancario. Collaborazione con team multidisciplinari e approccio metodico al ciclo di vita del software.",
+    "remedia_period": "Giu 2018 – Dic 2020",
     "remedia_role": "Front-End Developer",
     "remedia_desc": "Inizio del percorso come sviluppatore React, realizzando interfacce interattive e responsive per applicazioni custom. Progressiva espansione delle responsabilita' verso piccoli progetti full-stack.",
+    "trizeta_period": "Mag 2017 – Giu 2018",
     "trizeta_role": "Front-End Developer",
     "trizeta_desc": "Primi passi nel mondo dello sviluppo web con AngularJS, jQuery, JavaScript, HTML5 e CSS3. Costruzione delle basi tecniche e metodologiche della carriera."
   },
   "tools": {
     "title_line1": "STRUMENTI",
-    "title_line2": "PIU' USATI"
+    "title_line2": "PIU' USATI",
+    "cat_payments": "Pagamenti",
+    "cat_subscriptions": "Abbonamenti",
+    "cat_backend_db": "Backend / Database",
+    "cat_cloud": "Piattaforma Cloud",
+    "cat_build": "Build Tool",
+    "cat_backend_fw": "Backend Framework"
   },
   "repos": {
     "title_line1": "PROGETTI",

@@ -52,21 +52,21 @@ const REPOS_LIST = [
 ]
 
 const TOOLS_LIST = [
-  { name: 'Stripe', icon: SiStripe, url: 'https://stripe.com', category: 'Payments' },
-  { name: 'RevenueCat', icon: FiPackage, url: 'https://www.revenuecat.com', category: 'Subscriptions' },
-  { name: 'Firebase', icon: SiFirebase, url: 'https://firebase.google.com', category: 'Backend / Database' },
-  { name: 'Google Cloud', icon: SiGooglecloud, url: 'https://cloud.google.com', category: 'Cloud Platform' },
-  { name: 'AWS', icon: SiAmazonwebservices, url: 'https://aws.amazon.com', category: 'Cloud Platform' },
-  { name: 'Vite', icon: SiVite, url: 'https://vitejs.dev', category: 'Build Tool' },
-  { name: 'NestJS', icon: SiNestjs, url: 'https://nestjs.com', category: 'Backend Framework' },
+  { name: 'Stripe', icon: SiStripe, url: 'https://stripe.com', category: 'tools.cat_payments' },
+  { name: 'RevenueCat', icon: FiPackage, url: 'https://www.revenuecat.com', category: 'tools.cat_subscriptions' },
+  { name: 'Firebase', icon: SiFirebase, url: 'https://firebase.google.com', category: 'tools.cat_backend_db' },
+  { name: 'Google Cloud', icon: SiGooglecloud, url: 'https://cloud.google.com', category: 'tools.cat_cloud' },
+  { name: 'AWS', icon: SiAmazonwebservices, url: 'https://aws.amazon.com', category: 'tools.cat_cloud' },
+  { name: 'Vite', icon: SiVite, url: 'https://vitejs.dev', category: 'tools.cat_build' },
+  { name: 'NestJS', icon: SiNestjs, url: 'https://nestjs.com', category: 'tools.cat_backend_fw' },
 ]
 
-const COMPANIES: { id: string; name: string; period: string }[] = [
-  { id: 'exabyte', name: 'Exabyte', period: 'Oct 2023 \u2013 Present' },
-  { id: 'm31', name: 'M31', period: 'Jan 2023 \u2013 Sep 2023' },
-  { id: 'scai', name: 'SCAI ITEC', period: 'Dec 2020 \u2013 Dec 2022' },
-  { id: 'remedia', name: 'reMedia', period: 'Jun 2018 \u2013 Dec 2020' },
-  { id: 'trizeta', name: 'Trizeta', period: '2017 \u2013 2018' },
+const COMPANIES: { id: string; name: string }[] = [
+  { id: 'exabyte', name: 'Exabyte' },
+  { id: 'm31', name: 'M31' },
+  { id: 'scai', name: 'SCAI ITEC' },
+  { id: 'remedia', name: 'reMedia' },
+  { id: 'trizeta', name: 'Trizeta' },
 ]
 
 function App () {
@@ -348,7 +348,7 @@ function App () {
                     <VStack align="start" gap="1" pb="8">
                       <HStack gap="3" align="baseline" flexWrap="wrap">
                         <Text fontWeight="bold" fontSize={{ base: 'lg', md: 'xl' }} color="white">{company.name}</Text>
-                        <Text fontSize="xs" color={TEXT_SECONDARY} textTransform="uppercase" letterSpacing="wide">{company.period}</Text>
+                        <Text fontSize="xs" color={TEXT_SECONDARY} textTransform="uppercase" letterSpacing="wide">{t(`timeline.${company.id}_period`)}</Text>
                       </HStack>
                       <Text fontSize="sm" color={ACCENT} fontWeight="medium">{t(`timeline.${company.id}_role`)}</Text>
                       <Text color={TEXT_PRIMARY} fontSize={{ base: 'sm', md: 'md' }} lineHeight="tall">{t(`timeline.${company.id}_desc`)}</Text>
@@ -387,7 +387,7 @@ function App () {
                       <tool.icon size={32} color={ACCENT} />
                       <VStack align="start" gap="0">
                         <Text fontWeight="semibold" color="white" fontSize="sm">{tool.name}</Text>
-                        <Text fontSize="xs" color={TEXT_SECONDARY}>{tool.category}</Text>
+                        <Text fontSize="xs" color={TEXT_SECONDARY}>{t(tool.category)}</Text>
                       </VStack>
                     </HStack>
                   </Link>
