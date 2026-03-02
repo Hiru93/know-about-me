@@ -32,6 +32,13 @@ const NAV_ITEMS: { id: SectionId; icon: React.ElementType; labelKey: string }[] 
 
 const REPOS_LIST = [
   {
+    name: 'portale-pazienti',
+    url: 'https://github.com/Hiru93/portale-pazienti',
+    descKey: 'repos.portalepazienti_desc',
+    tech: ['NestJS', 'React', 'PostgreSQL', 'Docker'],
+    wip: true,
+  },
+  {
     name: 'know-about-me',
     url: 'https://github.com/Hiru93/know-about-me',
     descKey: 'repos.knowaboutme_desc',
@@ -427,7 +434,14 @@ function App () {
                       </Box>
                       <VStack align="start" gap="2" flex="1">
                         <HStack gap="2" justify="space-between" w="full">
-                          <Text fontWeight="semibold" color="white" fontSize="md">{repo.name}</Text>
+                          <HStack gap="2">
+                            <Text fontWeight="semibold" color="white" fontSize="md">{repo.name}</Text>
+                            {repo.wip && (
+                              <Text fontSize="xs" color="orange.300" bg="rgba(251,146,60,0.12)" px="2" py="0.5" borderRadius="md" fontWeight="medium">
+                                WIP
+                              </Text>
+                            )}
+                          </HStack>
                           <FiExternalLink size={14} color={ACCENT} />
                         </HStack>
                         <Text fontSize="sm" color={TEXT_PRIMARY} lineHeight="tall">{t(repo.descKey)}</Text>
