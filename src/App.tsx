@@ -42,7 +42,7 @@ const REPOS_LIST = [
     name: 'know-about-me',
     url: 'https://github.com/Hiru93/know-about-me',
     descKey: 'repos.knowaboutme_desc',
-    tech: ['React', 'TypeScript', 'Vite'],
+    tech: ['React', 'TypeScript', 'Vite', 'GitHub Actions'],
   },
   {
     name: 'mssqlImporter',
