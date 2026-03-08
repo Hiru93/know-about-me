@@ -35,7 +35,7 @@ const REPOS_LIST = [
     name: 'portale-pazienti',
     url: 'https://github.com/Hiru93/portale-pazienti',
     descKey: 'repos.portalepazienti_desc',
-    tech: ['NestJS', 'React', 'PostgreSQL', 'Docker'],
+    tech: ['NestJS', 'React', 'PostgreSQL', 'Docker', 'Redis'],
     wip: true,
   },
   {
