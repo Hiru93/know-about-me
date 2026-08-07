@@ -69,6 +69,7 @@ const TOOLS_LIST = [
 ]
 
 const COMPANIES: { id: string; name: string }[] = [
+  { id: 'comcentrica', name: 'Comcentrica' },
   { id: 'exabyte', name: 'Exabyte' },
   { id: 'm31', name: 'M31' },
   { id: 'scai', name: 'SCAI ITEC' },

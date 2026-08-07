@@ -10,7 +10,7 @@
   "stats": {
     "years_value": "9+",
     "years_label": "Anni di esperienza",
-    "companies_value": "5",
+    "companies_value": "6",
     "companies_label": "Le aziende con cui ho collaborato"
   },
   "about": {
@@ -29,7 +29,10 @@
   "timeline": {
     "title_line1": "9+ ANNI DI",
     "title_line2": "ESPERIENZA",
-    "exabyte_period": "Ott 2023 – Presente",
+    "comcentrica_period": "Mag 2026 – Presente",
+    "comcentrica_role": "Tech Lead",
+    "comcentrica_desc": "In qualità di Tech Lead, ho contribuito alla definizione delle architetture software in collaborazione con CTO e Product Owner, occupandomi dello sviluppo e della manutenzione di applicazioni realizzate con React, Node.js, Express e NestJS. Ho gestito infrastrutture cloud tramite AWS e Docker, definendo convention per CI/CD e organizzazione del codice. Ho inoltre supportato la formazione e l'organizzazione delle risorse junior, contribuito all'adozione di metodologie Agile e seguito l'integrazione di soluzioni basate su LLM, tra cui Anthropic API.",
+    "exabyte_period": "Ott 2023 – Apr 2026",
     "exabyte_role": "Full-Stack Developer",
     "exabyte_desc": "Sviluppo e manutenzione di applicazioni enterprise con Angular, React e Node.js, garantendo performance e scalabilita'. Gestione di infrastrutture cloud su Google Cloud Platform e AWS, implementazione di cloud functions e gestione di container tramite Docker. Supporto e formazione di risorse junior e collaborazione ai processi Agile.",
     "m31_period": "Gen 2023 – Ott 2023",
