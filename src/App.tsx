@@ -13,6 +13,14 @@ const CARD_BG = "#11151c"
 const TEXT_PRIMARY = "#c9d4e3"
 const TEXT_SECONDARY = "#7e8fa8"
 
+// Matches the start of the earliest entry in COMPANIES (Trizeta, May 2017)
+const CAREER_START_DATE = new Date('2017-05-01')
+
+function getYearsOfExperience (from: Date, to: Date = new Date()): number {
+  const years = (to.getTime() - from.getTime()) / (1000 * 60 * 60 * 24 * 365.25)
+  return Math.floor(years)
+}
+
 const SECTION_IDS = {
   EXPERIENCE: 'experience',
   TIMELINE: 'timeline',
@@ -303,11 +311,11 @@ function App () {
 
               <HStack gap={{ base: '8', md: '16' }} pt="2">
                 <VStack align="start" gap="0">
-                  <Text fontSize={{ base: '4xl', md: '6xl' }} fontWeight="bold" color="white" lineHeight="1">{t('stats.years_value')}</Text>
+                  <Text fontSize={{ base: '4xl', md: '6xl' }} fontWeight="bold" color="white" lineHeight="1">{getYearsOfExperience(CAREER_START_DATE)}+</Text>
                   <Text fontSize="xs" color={TEXT_SECONDARY} textTransform="uppercase" letterSpacing="widest" pt="1">{t('stats.years_label')}</Text>
                 </VStack>
                 <VStack align="start" gap="0">
-                  <Text fontSize={{ base: '4xl', md: '6xl' }} fontWeight="bold" color="white" lineHeight="1">{t('stats.companies_value')}</Text>
+                  <Text fontSize={{ base: '4xl', md: '6xl' }} fontWeight="bold" color="white" lineHeight="1">{COMPANIES.length}</Text>
                   <Text fontSize="xs" color={TEXT_SECONDARY} textTransform="uppercase" letterSpacing="widest" pt="1">{t('stats.companies_label')}</Text>
                 </VStack>
               </HStack>

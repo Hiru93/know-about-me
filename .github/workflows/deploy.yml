@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - master
+  schedule:
+    # Redeploy yearly so the computed "years of experience" stays current
+    # even when nothing else changes in the repo.
+    - cron: '0 0 1 5 *'
+  workflow_dispatch: {}
 
 permissions:
   contents: write
