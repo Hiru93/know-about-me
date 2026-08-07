@@ -8,7 +8,7 @@ Rather than sending a static PDF, this project lets me present myself in a more 
 
 - **Who I am** — Mattia Gallinaro, Full-Stack Web Developer based in Conselve (PD), active in the field since 2017
 - **Technical skills** — React, Angular, TypeScript, Node.js, cloud-native architectures (GCP, AWS, Docker, Kubernetes) and more
-- **Work experience** — a timeline of my collaborations with companies like Exabyte, M31, SCAI ITEC, reMedia and Trizeta, with context on my role and the technologies involved in each project
+- **Work experience** — a timeline of my collaborations with companies like Comcentrica, Exabyte, M31, SCAI ITEC, reMedia and Trizeta, with context on my role and the technologies involved in each project
 - **Education & background** — Computer Science studies at the University of Padova and a diploma as IT Technician
 
 ## Tech stack
